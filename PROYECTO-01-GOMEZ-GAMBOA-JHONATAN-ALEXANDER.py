@@ -1562,7 +1562,7 @@ condicion=True
 while condicion:
     for i in range(len(conteo_ventas_totales)-1):
         if conteo_ventas_totales[i][a]<conteo_ventas_totales[i+1][a]:
-            conteo_ventas_totales[i],conteo_ventas_totales[i+1] =            conteo_ventas_totales[i+1],conteo_ventas_totales[i]
+            conteo_ventas_totales[i],conteo_ventas_totales[i+1] =conteo_ventas_totales[i+1],conteo_ventas_totales[i]
     cont=0        
     for j in range(len(conteo_ventas_totales)-1):
         if conteo_ventas_totales[j][a]>=conteo_ventas_totales[j+1][a]:
@@ -1583,7 +1583,7 @@ condicion=True
 while condicion:
     for i in range(len(conteo_busquedas_totales)-1):
         if conteo_busquedas_totales[i][a]<conteo_busquedas_totales[i+1][a]:
-            conteo_busquedas_totales[i],conteo_busquedas_totales[i+1] =            conteo_busquedas_totales[i+1],conteo_busquedas_totales[i]
+            conteo_busquedas_totales[i],conteo_busquedas_totales[i+1] = conteo_busquedas_totales[i+1],conteo_busquedas_totales[i]
     cont=0        
     for j in range(len(conteo_busquedas_totales)-1):
         if conteo_busquedas_totales[j][a]>=conteo_busquedas_totales[j+1][a]:
@@ -1618,7 +1618,7 @@ for año in años:
         ls = []
         for p in lifestore_products:
             for s in lifestore_sales:
-                if s[1]==p[0] and año==s[3][6:10] and categoria==p[3]                and s[4]==0:
+                if s[1]==p[0] and año==s[3][6:10] and categoria==p[3] and s[4]==0:
                     ls.append([s[1],s[3],p[3], s[4]])
         ls_c.append(ls)
     clasificacion_ventas_ac.append(ls_c)
@@ -1767,11 +1767,11 @@ for año in años:
         condicion=True
         while condicion:
             for i in range(len(conteo_ventas_ac[indx_año][indx_cat])-1):
-                if conteo_ventas_ac[indx_año][indx_cat][i][a]>                conteo_ventas_ac[indx_año][indx_cat][i+1][a]:
-                    conteo_ventas_ac[indx_año][indx_cat][i],                    conteo_ventas_ac[indx_año][indx_cat][i+1] =                    conteo_ventas_ac[indx_año][indx_cat][i+1],                    conteo_ventas_ac[indx_año][indx_cat][i]
+                if conteo_ventas_ac[indx_año][indx_cat][i][a]>conteo_ventas_ac[indx_año][indx_cat][i+1][a]:
+                    conteo_ventas_ac[indx_año][indx_cat][i],conteo_ventas_ac[indx_año][indx_cat][i+1] =conteo_ventas_ac[indx_año][indx_cat][i+1],conteo_ventas_ac[indx_año][indx_cat][i]
             cont=0        
             for j in range(len(conteo_ventas_ac[indx_año][indx_cat])-1):
-                if conteo_ventas_ac[indx_año][indx_cat][j][a]<=                conteo_ventas_ac[indx_año][indx_cat][j+1][a]:
+                if conteo_ventas_ac[indx_año][indx_cat][j][a]<=conteo_ventas_ac[indx_año][indx_cat][j+1][a]:
                     cont+=1
             if cont>=len(conteo_ventas_ac[indx_año][indx_cat])-1:
                 condicion=False
@@ -1801,11 +1801,11 @@ for categoria in categorias:
     condicion=True
     while condicion:
         for i in range(len(conteo_busquedas_c[indx_cat])-1):
-            if conteo_busquedas_c[indx_cat][i][a]>            conteo_busquedas_c[indx_cat][i+1][a]:
-                conteo_busquedas_c[indx_cat][i],                conteo_busquedas_c[indx_cat][i+1] =                conteo_busquedas_c[indx_cat][i+1],                conteo_busquedas_c[indx_cat][i]
+            if conteo_busquedas_c[indx_cat][i][a]>conteo_busquedas_c[indx_cat][i+1][a]:
+                conteo_busquedas_c[indx_cat][i],conteo_busquedas_c[indx_cat][i+1] = conteo_busquedas_c[indx_cat][i+1],conteo_busquedas_c[indx_cat][i]
         cont=0        
         for j in range(len(conteo_busquedas_c[indx_cat])-1):
-            if conteo_busquedas_c[indx_cat][j][a]<=            conteo_busquedas_c[indx_cat][j+1][a]:
+            if conteo_busquedas_c[indx_cat][j][a]<=conteo_busquedas_c[indx_cat][j+1][a]:
                 cont+=1
         if cont>=len(conteo_busquedas_c[indx_cat])-1:
             condicion=False
@@ -1931,11 +1931,11 @@ for año in años:
     condicion=True
     while condicion:
         for i in range(len(promedio_reseñas_devoluciones_a[indx_año])-1):
-            if promedio_reseñas_devoluciones_a[indx_año][i][a]<            promedio_reseñas_devoluciones_a[indx_año][i+1][a]:
-                promedio_reseñas_devoluciones_a[indx_año][i],                promedio_reseñas_devoluciones_a[indx_año][i+1] =                promedio_reseñas_devoluciones_a[indx_año][i+1],                promedio_reseñas_devoluciones_a[indx_año][i]
+            if promedio_reseñas_devoluciones_a[indx_año][i][a]<promedio_reseñas_devoluciones_a[indx_año][i+1][a]:
+                promedio_reseñas_devoluciones_a[indx_año][i],promedio_reseñas_devoluciones_a[indx_año][i+1] = promedio_reseñas_devoluciones_a[indx_año][i+1],promedio_reseñas_devoluciones_a[indx_año][i]
         cont=0        
         for j in range(len(promedio_reseñas_devoluciones_a[indx_año])-1):
-            if promedio_reseñas_devoluciones_a[indx_año][j][a]>=            promedio_reseñas_devoluciones_a[indx_año][j+1][a]:
+            if promedio_reseñas_devoluciones_a[indx_año][j][a]>=promedio_reseñas_devoluciones_a[indx_año][j+1][a]:
                 cont+=1
         if cont>=len(promedio_reseñas_devoluciones_a[indx_año])-1:
             condicion=False
@@ -1999,7 +1999,7 @@ for año in años:
 #comenzar a eliminar ":" que se podria interpretar como hasta y 
 # - - - indices_to_remove[indx_año][-1]+1] que se podria entender como
 # hasta el ultimo elemento mas 1, ya que las rebanadas no cuentan el ultimo
-    del promedio_reseñas_devoluciones_a[indx_año]    [indices_to_remove[indx_año][0]:indices_to_remove[indx_año][-1]+1]
+    del promedio_reseñas_devoluciones_a[indx_año][indices_to_remove[indx_año][0]:indices_to_remove[indx_año][-1]+1]
 
 
 # Obteniendo listas de 10 productos con mejores reseñas y 20 con las peores
@@ -2364,7 +2364,7 @@ for año in años:
 # las ventan no tengan rembolsos.
 # si se cumplen las condiciones el elemento forma parte de la
 # clasificación
-                    if s[1]==p[0] and s[3][6:10]==año and                     p[3]==categoria and s[3][3:5]==mes and s[4]==0:
+                    if s[1]==p[0] and s[3][6:10]==año and p[3]==categoria and s[3][3:5]==mes and s[4]==0:
                         l.append([s[1],año,categoria,mes,s[4],p[2]])
 # lm comienza como una lista vacia pero guardara las listas que contienen
 # las ventas de ese mes
@@ -3336,7 +3336,7 @@ go de productos.            |
 # [id, nombre, ,precio, categoria]
                     cont=1
                     for p in lifestore_products:
-                        for i in [9,10,13,14,15,16,17,19,20,23,24,                                  26,27,30,32,34,35,36,37,38,39,41,                                  43,45,46,31,53,55,56,58,59,60,61,                                  62,63,64,65,68,69,70,71,72,73,75,                                  76,77,78,79,80,81,82,83,86,87,88,                                  90,91,92,93,95,96]:
+                        for i in [9,10,13,14,15,16,17,19,20,23,24,26,27,30,32,34,35,36,37,38,39,41,43,45,46,31,53,55,56,58,59,60,61,62,63,64,65,68,69,70,71,72,73,75,                                  76,77,78,79,80,81,82,83,86,87,88,                                  90,91,92,93,95,96]:
                             if p[0]==i:
                                 c = str(cont)
                                 sp1 = str(p[0])
@@ -3386,7 +3386,7 @@ uirirlos                    |
 # [id, nombre, ,precio, categoria]
                     cont=1
                     for p in lifestore_products:
-                        for i in [1,6,8,11,12,18,21,22,25,28,33,40                                  ,47,48,49,50,51,52,74,84,89,94]:
+                        for i in [1,6,8,11,12,18,21,22,25,28,33,40,47,48,49,50,51,52,74,84,89,94]:
                             if p[0]==i:
                                 c = str(cont)
                                 sp1 = str(p[0])
